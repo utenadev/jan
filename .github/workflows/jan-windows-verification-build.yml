@@ -30,7 +30,7 @@ jobs:
         run: make build-windows
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jan-windows-verification-build
           path: src-tauri/target/release/bundle/nsis/*.exe
