@@ -1,0 +1,70 @@
+name: Check for Upstream Updates
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    # Runs every day at 08:00 UTC (17:00 JST)
+    - cron: '0 8 * * *'
+
+jobs:
+  check-for-updates:
+    runs-on: ubuntu-latest
+    outputs:
+      new_commits: ${{ steps.check_commits.outputs.new_commits }}
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Check for new commits in upstream
+        id: check_commits
+        run: |
+          UPSTREAM_REPO="https://github.com/menloresearch/jan.git"
+          UPSTREAM_BRANCH="dev"
+          LOCAL_BRANCH="dev"
+
+          LOCAL_HASH=$(git rev-parse "origin/${LOCAL_BRANCH}")
+          echo "Local dev branch hash: ${LOCAL_HASH}"
+
+          UPSTREAM_HASH=$(git ls-remote "${UPSTREAM_REPO}" "refs/heads/${UPSTREAM_BRANCH}" | awk '{print $1}')
+          echo "Upstream dev branch hash: ${UPSTREAM_HASH}"
+
+          if [ "${LOCAL_HASH}" != "${UPSTREAM_HASH}" ]; then
+            echo "New commits found in upstream repository."
+            echo "new_commits=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Your dev branch is up-to-date with the upstream repository."
+            echo "new_commits=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  create-issue:
+    needs: check-for-updates
+    if: needs.check-for-updates.outputs.new_commits == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create issue to notify about upstream changes
+        uses: peter-evans/create-issue@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Fork元リポジトリの更新通知 (Upstream Repository Updated)'
+          body: |
+            Fork元リポジトリ (`menloresearch/jan`) の `dev` ブランチが更新されました。
+
+            最新の変更を取り込むために、以下の手順でブランチの同期を行ってください。
+
+            ```bash
+            # 1. Upstreamリモートの追加 (初回のみ)
+            git remote add upstream https://github.com/menloresearch/jan.git
+
+            # 2. Upstreamから最新情報を取得
+            git fetch upstream
+
+            # 3. devブランチに移動
+            git checkout dev
+
+            # 4. Upstreamのdevブランチの内容をマージ
+            git merge upstream/dev
+            ```
+
+            同期が完了したら、このIssueはクローズしてください。
+          labels: 'sync, maintenance'
+          assignees: utenadev
