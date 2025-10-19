@@ -1,0 +1,43 @@
+name: Check for Translation Updates
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - 'web-app/src/locales/en/**.json'
+
+jobs:
+  create-translation-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # We need to fetch the history to compare changes against the previous commit
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: web-app/src/locales/en/**.json
+
+      - name: Create issue if translation files changed
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: peter-evans/create-issue@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: '翻訳更新のお願い (Translation Update Required)'
+          body: |
+            `dev`ブランチで英語のロケールファイルが更新されました。
+            以下のファイルの日本語への翻訳対応をお願いします。
+
+            **変更されたファイルリスト:**
+            ```
+            ${{ steps.changed-files.outputs.all_changed_files }}
+            ```
+
+            ご確認の上、翻訳作業をお願いいたします。
+          labels: 'translation, help wanted, enhancement'
+          assignees: utenadev
