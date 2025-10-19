@@ -27,7 +27,9 @@ jobs:
         run: make install-and-build
 
       - name: Build application
-        run: make build-windows
+        run: yarn build:tauri
+        env:
+          NODE_OPTIONS: "--preserve-symlinks"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
