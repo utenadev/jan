@@ -1,7 +1,6 @@
 name: Jan Windows Verification Build
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -9,6 +8,7 @@ on:
   pull_request:
     branches:
       - main
+      - dev
 
 jobs:
   build-windows-verification:
@@ -23,15 +23,13 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: make install-and-build
+        run: make setup
 
       - name: Build application
-        run: yarn build:tauri
-        env:
-          NODE_OPTIONS: "--preserve-symlinks"
+        run: make build-windows
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: jan-windows-verification-build
           path: src-tauri/target/release/bundle/nsis/*.exe
