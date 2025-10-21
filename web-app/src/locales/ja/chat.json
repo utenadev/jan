@@ -1,5 +1,5 @@
 {
-  "welcome": "こんにちは、調子はいかがですか？",
+  "welcome": "こんにちは、何かお手伝いできることはありますか？",
   "description": "今日はどのようなご用件でしょうか？",
   "temporaryChat": "一時的なチャット",
   "temporaryChatDescription": "チャット履歴に保存されない一時的な会話を開始します。",
