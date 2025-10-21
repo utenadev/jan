@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils'
 
 const LANGUAGES = [
   { value: 'en', label: 'English' },
+  { value: 'ja', label: '日本語' },
   { value: 'id', label: 'Bahasa' },
   { value: 'pl', label: 'Polski' },
   { value: 'vn', label: 'Tiếng Việt' },

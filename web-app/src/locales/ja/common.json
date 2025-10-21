@@ -13,15 +13,15 @@
   "keyboardShortcuts": "ショートカット",
   "newChat": "新しいチャット",
   "favorites": "お気に入り",
-  "recents": "最近の項目",
+  "recents": "最近のチャット",
   "hub": "ハブ",
   "helpSupport": "ヘルプとサポート",
   "helpUsImproveJan": "Janの改善にご協力ください",
   "unstarAll": "すべてのスターを解除",
   "unstar": "スターを解除",
   "deleteAll": "すべて削除",
-  "star": "スターを付ける",
-  "rename": "名前を変更",
+  "star": "スター",
+  "rename": "名前の変更",
   "delete": "削除",
   "copied": "コピーしました！",
   "dataFolder": "データフォルダ",
@@ -54,7 +54,7 @@
   "stop": "停止",
   "preview": "プレビュー",
   "compactWidth": "コンパクト幅",
-  "fullWidth": "全幅",
+  "fullWidth": "フル幅",
   "dark": "ダーク",
   "light": "ライト",
   "system": "システム",
@@ -63,14 +63,14 @@
   "medium": "中",
   "newThread": "新しいスレッド",
   "noResultsFound": "結果が見つかりません",
-  "noThreadsYet": "スレッドはまだありません",
+  "noThreadsYet": "まだスレッドがありません",
   "noThreadsYetDesc": "新しい会話を始めると、ここにスレッドの履歴が表示されます。",
   "downloads": "ダウンロード",
   "downloading": "ダウンロード中",
   "cancelDownload": "ダウンロードをキャンセル",
-  "downloadCancelled": "ダウンロードがキャンセルされました",
+  "downloadCancelled": "ダウンロードをキャンセルしました",
   "downloadComplete": "ダウンロード完了",
-  "thinking": "考え中...",
+  "thinking": "思考中...",
   "thought": "思考",
   "callingTool": "ツールを呼び出し中",
   "completed": "完了",
@@ -94,19 +94,19 @@
   "editMessage": "メッセージを編集",
   "deleteMessage": "メッセージを削除",
   "deleteThread": "スレッドを削除",
-  "renameThread": "スレッド名を変更",
+  "renameThread": "スレッドの名前を変更",
   "threadTitle": "スレッドのタイトル",
   "deleteAllThreads": "すべてのスレッドを削除",
-  "allThreadsUnfavorited": "すべてのスレッドのお気に入りを解除しました",
-  "deleteAllThreadsConfirm": "本当にすべてのスレッドを削除しますか？この操作は元に戻せません。",
+  "allThreadsUnfavorited": "すべてのスレッドがお気に入りから解除されました",
+  "deleteAllThreadsConfirm": "すべてのスレッドを削除してもよろしいですか？この操作は元に戻せません。",
   "addProvider": "プロバイダーを追加",
   "addOpenAIProvider": "OpenAIプロバイダーを追加",
   "enterNameForProvider": "プロバイダーの名前を入力してください",
-  "providerAlreadyExists": "プロバイダー名「{{name}}」はすでに存在します。別の名前を選択してください。",
+  "providerAlreadyExists": "名前が「{{name}}」のプロバイダーは既に存在します。別の名前を選択してください。",
   "adjustFontSize": "フォントサイズを調整",
   "changeLanguage": "言語を変更",
   "editTheme": "テーマを編集",
-  "editCodeBlockStyle": "コードブロックのスタイルを編集",
+  "editCodeBlockStyle": "コードブロックスタイルを編集",
   "editServerHost": "サーバーホストを編集",
   "pickColorWindowBackground": "ウィンドウの背景色を選択",
   "pickColorAppMainView": "アプリのメインビューの色を選択",
@@ -165,8 +165,8 @@
     "errorParse": "JSONの解析に失敗しました",
     "errorPaste": "JSONの貼り付けに失敗しました",
     "errorFormat": "無効なJSON形式です",
-    "titleAll": "すべてのサーバー構成を編集",
-    "placeholder": "JSON構成を入力...",
+    "titleAll": "すべてのサーバー設定を編集",
+    "placeholder": "JSON設定を入力...",
     "save": "保存"
   },
   "editModel": {
@@ -181,21 +181,21 @@
   "outOfContextError": {
     "truncateInput": "入力を切り詰める",
     "title": "コンテキストエラー",
-    "description": "このチャットはAIのメモリ制限に近づいています。ホワイトボードがいっぱいになるようなものです。メモリウィンドウ（コンテキストサイズ）を拡張して記憶容量を増やすことができますが、コンピュータのメモリ使用量が増える可能性があります。また、入力を切り詰めることもできます。これは、新しいメッセージのためのスペースを確保するために、チャット履歴の一部を忘れることを意味します。",
+    "description": "このチャットはAIのメモリ制限に近づいています。ホワイトボードがいっぱいになるようなものです。メモリウィンドウ（コンテキストサイズ）を拡張して、より多くの情報を記憶させることはできますが、コンピュータのメモリをより多く使用する可能性があります。また、入力を切り詰めることもできます。これにより、新しいメッセージのためのスペースを確保するために、チャット履歴の一部が忘れられます。",
     "increaseContextSizeDescription": "コンテキストサイズを増やしますか？",
     "increaseContextSize": "コンテキストサイズを増やす"
   },
   "toolApproval": {
-    "title": "ツール権限のリクエスト",
+    "title": "ツール権限リクエスト",
     "description": "アシスタントは<strong>{{toolName}}</strong>を使用しようとしています",
-    "securityNotice": "信頼できるツールのみを許可してください。ツールはあなたのシステムやデータにアクセスする可能性があります。",
+    "securityNotice": "信頼できるツールのみを許可してください。ツールはシステムやデータにアクセスできます。",
     "deny": "拒否",
     "allowOnce": "一度だけ許可",
     "alwaysAllow": "常に許可"
   },
   "deleteModel": {
     "title": "モデルを削除: {{modelId}}",
-    "description": "本当にこのモデルを削除しますか？この操作は元に戻せません。",
+    "description": "このモデルを削除してもよろしいですか？この操作は元に戻せません。",
     "success": "モデル {{modelId}} は完全に削除されました。",
     "cancel": "キャンセル",
     "delete": "削除"
@@ -205,7 +205,7 @@
     "description": "このプロバイダーとすべてのモデルを削除します。この操作は元に戻せません。",
     "success": "プロバイダー {{provider}} は完全に削除されました。",
     "confirmTitle": "プロバイダーを削除: {{provider}}",
-    "confirmDescription": "本当にこのプロバイダーを削除しますか？この操作は元に戻せません。",
+    "confirmDescription": "このプロバイダーを削除してもよろしいですか？この操作は元に戻せません。",
     "cancel": "キャンセル",
     "delete": "削除"
   },
@@ -216,7 +216,7 @@
   "dialogs": {
     "changeDataFolder": {
       "title": "データフォルダの場所を変更",
-      "description": "本当にデータフォルダの場所を変更しますか？これにより、すべてのデータが新しい場所に移動し、アプリケーションが再起動します。",
+      "description": "データフォルダの場所を変更してもよろしいですか？これにより、すべてのデータが新しい場所に移動され、アプリケーションが再起動します。",
       "currentLocation": "現在の場所:",
       "newLocation": "新しい場所:",
       "cancel": "キャンセル",
@@ -227,13 +227,13 @@
       "description": "すべてのスレッドが削除されます。この操作は元に戻せません。"
     },
     "deleteThread": {
-      "description": "本当にこのスレッドを削除しますか？この操作は元に戻せません。"
+      "description": "このスレッドを削除してもよろしいですか？この操作は元に戻せません。"
     },
     "editMessage": {
       "title": "メッセージを編集"
     },
     "messageMetadata": {
-      "title": "メッセージメタデータ"
+      "title": "メッセージのメタデータ"
     }
   },
   "projects": {
@@ -247,13 +247,13 @@
     "projectName": "プロジェクト名",
     "enterProjectName": "プロジェクト名を入力...",
     "noProjectsAvailable": "利用可能なプロジェクトはありません",
-    "noProjectsYet": "プロジェクトはまだありません",
+    "noProjectsYet": "まだプロジェクトがありません",
     "noProjectsYetDesc": "「プロジェクトを追加」ボタンをクリックして、新しいプロジェクトを開始してください。",
     "projectNotFound": "プロジェクトが見つかりません",
     "projectNotFoundDesc": "お探しのプロジェクトは存在しないか、削除されています。",
     "deleteProjectDialog": {
       "title": "プロジェクトを削除",
-      "description": "本当にこのプロジェクトを削除しますか？この操作は元に戻せません。",
+      "description": "このプロジェクトを削除してもよろしいですか？この操作は元に戻せません。",
       "deleteButton": "削除",
       "successWithName": "プロジェクト「{{projectName}}」を正常に削除しました",
       "successWithoutName": "プロジェクトを正常に削除しました",
@@ -267,12 +267,12 @@
       "namePlaceholder": "プロジェクト名を入力...",
       "createButton": "作成",
       "updateButton": "更新",
-      "alreadyExists": "プロジェクト「{{projectName}}」はすでに存在します",
+      "alreadyExists": "プロジェクト「{{projectName}}」は既に存在します",
       "createSuccess": "プロジェクト「{{projectName}}」を正常に作成しました",
-      "renameSuccess": "プロジェクト名を「{{oldName}}」から「{{newName}}」に正常に変更しました"
+      "renameSuccess": "プロジェクト名を「{{oldName}}」から「{{newName}}」に変更しました"
     },
     "noConversationsIn": "{{projectName}}には会話がありません",
-    "startNewConversation": "以下で{{projectName}}との新しい会話を開始します",
+    "startNewConversation": "以下で{{projectName}}との新しい会話を開始してください",
     "conversationsIn": "{{projectName}}での会話",
     "conversationsDescription": "会話をクリックしてチャットを続けるか、以下で新しい会話を開始してください。",
     "thread": "スレッド",
@@ -284,28 +284,28 @@
   },
   "toast": {
     "allThreadsUnfavorited": {
-      "title": "すべてのスレッドのお気に入りを解除しました",
+      "title": "すべてのスレッドがお気に入りから解除されました",
       "description": "すべてのスレッドがお気に入りから削除されました。"
     },
     "deleteAllThreads": {
-      "title": "すべてのスレッドを削除",
+      "title": "すべてのスレッドを削除しました",
       "description": "すべてのスレッドが完全に削除されました。"
     },
     "renameThread": {
-      "title": "スレッド名を変更",
+      "title": "スレッドの名前を変更しました",
       "description": "スレッドのタイトルが「{{title}}」に変更されました"
     },
     "deleteThread": {
-      "title": "スレッドを削除",
+      "title": "スレッドを削除しました",
       "description": "このスレッドは完全に削除されました。"
     },
     "editMessage": {
-      "title": "メッセージを編集",
+      "title": "メッセージを編集しました",
       "description": "メッセージは正常に編集されました。モデルの応答をお待ちください。"
     },
     "appUpdateDownloaded": {
-      "title": "アプリの更新をダウンロードしました",
-      "description": "アプリの更新は正常にダウンロードされました。"
+      "title": "アプリの更新がダウンロードされました",
+      "description": "アプリの更新が正常にダウンロードされました。"
     },
     "appUpdateDownloadFailed": {
       "title": "アプリの更新のダウンロードに失敗しました",
@@ -317,7 +317,7 @@
     },
     "downloadCancelled": {
       "title": "ダウンロードがキャンセルされました",
-      "description": "ダウンロード処理はキャンセルされました"
+      "description": "ダウンロードプロセスはキャンセルされました"
     },
     "downloadFailed": {
       "title": "ダウンロードに失敗しました",
@@ -325,31 +325,31 @@
     },
     "modelValidationStarted": {
       "title": "モデルを検証中",
-      "description": "ダウンロードしたモデル「{{modelId}}」を正常に完了しました。整合性を検証しています..."
+      "description": "ダウンロードされたモデル「{{modelId}}」を正常に検証しています..."
     },
     "modelValidationFailed": {
       "title": "モデルの検証に失敗しました",
-      "description": "ダウンロードしたモデル「{{modelId}}」は整合性検証に失敗し、削除されました。ファイルが破損または改ざんされている可能性があります。"
+      "description": "ダウンロードされたモデル「{{modelId}}」は整合性の検証に失敗し、削除されました。ファイルが破損または改ざんされている可能性があります。"
     },
     "downloadAndVerificationComplete": {
       "title": "ダウンロード完了",
-      "description": "モデル「{{item}}」は正常にダウンロードおよび検証されました"
+      "description": "モデル「{{item}}」が正常にダウンロードおよび検証されました"
     },
     "projectCreated": {
       "title": "プロジェクトが作成されました",
-      "description": "プロジェクト「{{projectName}}」は正常に作成されました"
+      "description": "プロジェクト「{{projectName}}」が正常に作成されました"
     },
     "projectRenamed": {
-      "title": "プロジェクト名が変更されました",
-      "description": "プロジェクト名は「{{oldName}}」から「{{newName}}」に正常に変更されました"
+      "title": "プロジェクトの名前が変更されました",
+      "description": "プロジェクト名が「{{oldName}}」から「{{newName}}」に変更されました"
     },
     "projectDeleted": {
       "title": "プロジェクトが削除されました",
-      "description": "プロジェクト「{{projectName}}」は正常に削除されました"
+      "description": "プロジェクト「{{projectName}}」が正常に削除されました"
     },
     "projectAlreadyExists": {
-      "title": "プロジェクトはすでに存在します",
-      "description": "プロジェクト「{{projectName}}」はすでに存在します"
+      "title": "プロジェクトは既に存在します",
+      "description": "プロジェクト「{{projectName}}」は既に存在します"
     },
     "projectDeleteFailed": {
       "title": "削除に失敗しました",
@@ -357,11 +357,11 @@
     },
     "threadAssignedToProject": {
       "title": "スレッドが割り当てられました",
-      "description": "スレッドは「{{projectName}}」に正常に割り当てられました"
+      "description": "スレッドが「{{projectName}}」に正常に割り当てられました"
     },
     "threadRemovedFromProject": {
       "title": "スレッドが削除されました",
-      "description": "スレッドは「{{projectName}}」から正常に削除されました"
+      "description": "スレッドが「{{projectName}}」から正常に削除されました"
     }
   }
 }
